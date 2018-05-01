@@ -100,7 +100,7 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const mapboxgl = __webpack_require__(/*! mapbox-gl */ \"./node_modules/mapbox-gl/dist/mapbox-gl.js\")\n\nmapboxgl.accessToken =\n  'pk.eyJ1Ijoic2lhbWVzZWd1eSIsImEiOiJjamV6dGJwNmwwZnprMzFvYTVqZXR6eWF3In0.A391dwHbc5ypIjMcA3SV9g'\n\nconst map = new mapboxgl.Map({\n  container: 'map',\n  center: [-74.0, 40.705],\n  zoom: 12,\n  style: 'mapbox://styles/mapbox/streets-v10'\n})\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("const mapboxgl = __webpack_require__(/*! mapbox-gl */ \"./node_modules/mapbox-gl/dist/mapbox-gl.js\")\nconst marker = document.createElement(\"div\")\n\nmapboxgl.accessToken =\n  'pk.eyJ1Ijoic2lhbWVzZWd1eSIsImEiOiJjamV6dGJwNmwwZnprMzFvYTVqZXR6eWF3In0.A391dwHbc5ypIjMcA3SV9g'\n\nconst map = new mapboxgl.Map({\n  container: 'map',\n  center: [-74.0, 40.705],\n  zoom: 12,\n  style: 'mapbox://styles/mapbox/streets-v10'\n})\n\nmarker.style.width = \"32px\"\nmarker.style.height = \"39px\"\nmarker.style.backgroundImage = \"url(http://i.imgur.com/WbMOfMl.png)\";\n\nnew mapboxgl.Marker(marker).setLngLat([-74.009, 40.705]).addTo(map)\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
